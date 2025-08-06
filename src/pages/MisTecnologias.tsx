@@ -1,4 +1,5 @@
 import React from "react";
+import TechnologyCard from "../components/TechnologyCard";
 import "./MisTecnologias.css";
 import { FaReact, FaNodeJs, FaDatabase, FaGitAlt, FaJsSquare } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
@@ -22,17 +23,16 @@ const MisTecnologias: React.FC = () => {
     <main className="page-container">
   <h1>Mis Tecnologías</h1>
   <div className="card-grid">
-  {tecnologias.map((tec, index) => {
-    const nivelClase = tec.nivel.toLowerCase().replace(/\s+/g, '-');
-    return (
-      <div className={`card ${nivelClase}`} key={index}>
-        <div className="icono">{tec.icono}</div>
-        <h2>{tec.nombre}</h2>
-        <p>Nivel: {tec.nivel}</p>
-      </div>
-    );
-  })}
+  {tecnologias.map((tec, index) => (
+    <TechnologyCard
+      key={index}
+      nombre={tec.nombre}
+      nivel={tec.nivel}
+      icono={tec.icono}
+    />
+  ))}
 </div>
+
 </main>
 
   );
