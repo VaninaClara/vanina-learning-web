@@ -52,3 +52,11 @@
   border-left-color: #9e9e9e;
 }
 
+.icono {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+  display: flex;
+  justify-content: center;
+}
+
